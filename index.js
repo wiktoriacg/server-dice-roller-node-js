@@ -5,9 +5,7 @@ const port = process.env.PORT || 3000;
 
 // Enable CORS
 app.use(cors());
-
-app.use(express.static(__dirname + '/public'))
-
+app.use(express.static('static'));
 // Endpoint to roll a dice
 app.get('/api/roll/:sides', (req, res) => {
   const sides = parseInt(req.params.sides);
